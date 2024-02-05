@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\sellerController;
+use App\Http\Controllers\mainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard-seller', [sellerController::class, 'index'])->name('DashboardSeller');
+Route::get('/dashboard', [mainController::class, 'index'])->name('Dashboard');
