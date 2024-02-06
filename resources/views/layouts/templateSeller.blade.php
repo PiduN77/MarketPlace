@@ -10,7 +10,7 @@
     <!-- ===============================================-->
     <!--    Document Title-->
     <!-- ===============================================-->
-    <title>Seller | Dashboard &amp; SYNC</title>
+    <title>Seller | Dashboard </title>
 
 
     <!-- ===============================================-->
@@ -30,6 +30,9 @@
     <meta name="theme-color" content="#ffffff">
     <script src="{{ asset('assets/Admin/public') }}/assets/js/config.js"></script>
     <script src="{{ asset('assets/Admin/public') }}/vendors/overlayscrollbars/OverlayScrollbars.min.js"></script>
+
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/07878452fc.js" crossorigin="anonymous"></script>
 
 
     <!-- ===============================================-->
@@ -78,7 +81,7 @@
                     container.classList.add('container-fluid');
                 }
             </script>
-            @include('layouts.sidebar')
+            @include('layouts.sidebarSeller')
             <div class="content">
                 @include('layouts.navbar')
                 @yield('content')
