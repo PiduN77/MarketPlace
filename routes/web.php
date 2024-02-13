@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\sellerController;
 use App\Http\Controllers\mainController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +23,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('/dashboard-seller', [sellerController::class, 'index'])->name('DashboardSeller');
 Route::get('/dashboard', [mainController::class, 'index'])->name('Dashboard');
+Route::get('/dashboard-admin', [AdminController::class, 'index'])->name('DashboardAdmin');
